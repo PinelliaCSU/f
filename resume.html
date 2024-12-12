@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人风采</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 1500px;
+        }
+
+        .shell {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+            transition: clip-path 0.5s ease;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+            background-image: url(background5.png);
+            background-size: cover;
+            transform: scale(1);
+
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+
+        .main h2 {
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+
+        .mian img {
+            width: 40%;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Lato:700,900');
+
+        @font-face {
+            font-family: Arno Pro;
+            src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ArnoPro-Regular.otf);
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: Arno Pro;
+            src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ArnoPro-Italic.otf);
+            font-style: italic;
+        }
+
+        p {
+            font-family: Arno Pro, serif;
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        p.credits {
+            font-style: italic;
+            text-indent: 0 !important;
+            margin: 1rem 0;
+        }
+
+        p a {
+            font-weight: bolder;
+            color: #000;
+            text-decoration: none;
+        }
+
+        @supports (font-variant-caps: small-caps) {
+            .multicol:first-of-type p:first-of-type {
+                font-variant-caps: small-caps;
+            }
+        }
+
+        p:not(:first-of-type) {
+            text-indent: 1.4rem;
+        }
+
+        .multicol {
+            column-count: 4;
+            column-gap: 2rem;
+        }
+
+        .multicol+img {
+            margin: 2rem 0;
+        }
+
+        article {
+            width: 80%;
+            margin: 0 auto 4rem;
+        }
+
+        article img {
+            width: 100%;
+        }
+
+        article header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+        }
+
+        article h1 {
+            margin-top: 0;
+            font-size: 3rem;
+        }
+
+        article h2 {
+            break-after: column;
+            font-size: 1.5rem;
+        }
+
+        h1,
+        h2 {
+            font-family: Lato, sans-serif;
+        }
+
+        @media all and (max-width: 1600px) {
+            .multicol {
+                column-count: 3;
+            }
+        }
+
+        @media all and (max-width: 1000px) {
+            .multicol {
+                column-count: 2;
+            }
+        }
+
+        @media all and (max-width:800px) {
+            article h2 {
+                break-after: avoid;
+            }
+
+            .multicol {
+                column-count: 1;
+            }
+        }
+
+        @media all and (max-width:600px) {
+            body {
+                margin: 0;
+            }
+
+            article {
+                width: 100%;
+            }
+
+            .multicol {
+                padding: 0 1rem;
+            }
+
+            article header {
+                margin-bottom: 2.5rem;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+
+        .back{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+        .back a{
+            text-decoration: none;
+            color: #4fb8e9;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="shell">
+        <header>
+            <div class="img"></div>
+        </header>
+
+        <div class="main">
+            <main>
+                <article>
+                    <h1>下面是一些</h1>
+                    <h2>个人词作</h2>
+                    <div class="multicol">
+                        <h3>少年游·长沙逢雨作</h3>
+                        <p><br><br>
+                            十年霜角枉诗书，细雨梦不回。<br>
+                            堤柳飞扬，孤城梅蕊，江外六朝垒。<br>
+                            神都旧事叹青紫，长记故人归。<br>
+                            遍地春愁，橘洲驿上，寥廓映朝辉。
+                        </p>
+
+
+                    </div>
+                    、<div class="multicol">
+                        <h3>万里春·秋日感兴兼忆杂事</h3>
+                        <p><br><br>
+                            烟山重重，吹泪杨花青翠。<br>
+                            念高楼，地北天南。<br>
+                            昔人梦去散。<br>
+                            此夜归途久。<br>
+                            意中事。<br>
+                            旧园湄隐。<br>
+                            雪中梅。<br>
+                            烂灿新台。<br>
+                            落英随君去。
+
+                        </p>
+                    </div>
+                    <img src="p0.jpg" alt="">
+                    <div class="multicol">
+                        <p>除此以外就没有亮点了（虽然写的词也普普通通的），
+                            性格比较温和，不喜欢与别人争斗，想要做游戏，但又不太喜欢玩
+                            （我是不是废了？）之前想要成为一个文学家，初中时阅读了不少文学书籍
+                            比如《追忆似水年华》，私以为是20世纪最伟大的文学著作。还喜欢研究历史，
+                            尤其是三国史与近代史，希望在中南可以实现突破，成就美好的未来。
+                        </p>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+    <div class="back">
+        <a href="home.html">回到过去~~</a>
+    </div>
+    <script>
+        const header = document.querySelector('header');
+        const img = document.querySelector('.img');
+        let scrollDistance = 0;
+        let requestId = null;
+        function updateHeaderClipPath() {
+            const clipPathValue = `polygon(0 0, 100% 0%, 100% ${(scrollDistance <= 600) ? 100 - ((scrollDistance / 600) * 60) : 75}%, 0 100%)`;
+            header.style.clipPath = clipPathValue;
+            const scaleValue = 1 + ((scrollDistance / 600) * 1);
+            img.style.transform = `scale(${scaleValue})`;
+            const opacityValue = (scrollDistance / 600);
+        }
+        function scrollHandler(event) {
+            if (event.deltaY < 0) {
+                scrollDistance = Math.max(0, scrollDistance + event.deltaY);
+            } else {
+                scrollDistance = Math.min(600, scrollDistance + event.deltaY);
+            }
+            if (!requestId) {
+                requestId = window.requestAnimationFrame(() => {
+                    updateHeaderClipPath();
+                    requestId = null;
+                });
+            }
+        }
+        window.addEventListener('wheel', scrollHandler);
+    </script>
+    </script>
+</body>
+
+</html>
